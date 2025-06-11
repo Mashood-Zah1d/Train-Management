@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Cancellation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background: #1e1e1e;
+      font-family: Arial, sans-serif;
+    }
+    .form-container {
+      background-color: #f0f0f0;
+      padding: 30px;
+      margin: 60px auto;
+      border-radius: 12px;
+      max-width: 500px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+    .btn-danger {
+      background-color: #dc3545;
+      border: none;
+    }
+    .btn-danger:hover {
+      background-color: #c82333;
+    }
+    #message {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Add Cancellation</h2>
+    <form id="cancellationForm">
+      <div class="mb-3">
+        <label for="cancellation_id" class="form-label">Cancellation ID</label>
+        <input type="number" class="form-control" id="cancellation_id" required>
+      </div>
+      <div class="mb-3">
+        <label for="ticket_id" class="form-label">Ticket ID</label>
+        <input type="number" class="form-control" id="ticket_id" required>
+      </div>
+      <div class="mb-3">
+        <label for="reason" class="form-label">Reason</label>
+        <input type="text" class="form-control" id="reason">
+      </div>
+      <div class="mb-3">
+        <label for="refund_amount" class="form-label">Refund Amount</label>
+        <input type="number" step="0.01" class="form-control" id="refund_amount" required>
+      </div>
+      <div class="mb-3">
+        <label for="status" class="form-label">Status</label>
+        <select class="form-control" id="status" required>
+          <option value="Pending">Pending</option>
+          <option value="Processed">Processed</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-danger w-100">Add Cancellation</button>
+    </form>
+    <div id="message"></div>
+  </div>
+
+  <script src="./JS/addcancellation.js"></script>
+</body>
+</html>

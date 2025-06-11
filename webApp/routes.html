@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Routes</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h2 class="mb-3">Routes</h2>
+      <canvas id="routeChart" width="300" height="50"></canvas>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover" id="Routes_table">
+          <thead class="table-dark">
+            <tr>
+              <th>route_id</th>
+              <th>start_station_id</th>
+              <th>end_station_id</th>
+              <th>distance_km</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./JS/routes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
